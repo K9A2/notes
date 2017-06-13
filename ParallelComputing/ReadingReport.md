@@ -166,17 +166,29 @@ Hence, we are able to draw our new design base on these facts(See Fig.5).
 
 <p style="text-align: center">Fig.5 Hierarchical Layout</p>
 
-With *hierarchical layout*, it is easy to construct the Megastore with the support of Bigtable, and use the *declarative denormalization* to help making data storage mapped to Bigtable. Finally, the elimination of joins will be the last result.
+With *hierarchical layout*, it is easy to construct the Megastore above Bigtable, and use the *declarative denormalization* to help making data storage mapped to Bigtable. Finally, the elimination of joins will be the last result.
 
 ### 3.2 Data Model with Example
 
+With a hierarchical philosophy in mind, we had inplemented a layered layout(See Fig.6).
 
+![Data model](./model.jpg)
+
+<p style="text-align: center">Fig.6 Data Model</p>
+
+Fig.6 is a data model sample which contains a 4-layer layout: *SCHEMA*, *TABLE*, *ENTITY*, *PROPERTY*. In this sample, we created a SCEMA named PhotoApp, a user TABLE under PhotoApp, some Photo table, and 2 indexes.
+
+All tables have their own pirmary keys.
 
 #### 3.2.1 Elimination of Joins
 
 #### 3.2.2 Critical Indexes
 
 #### 3.2.3 Actual Data Storage with Bigtable
+
+![Data in Bigtable](./sample.jpg)
+
+<p style="text-align: center">Fig.7 Data in Bigtable</p>
 
 ### 3.3 ACID Semantics and MVCC within Meagstore
 
