@@ -6,8 +6,9 @@
 - [1. SRSniffer](#1-srsniffer)
     - [1.1 测试过程](#11-测试过程)
     - [1.2 测试结果](#12-测试结果)
-- [2. SuperScan](#2-superscan)
-    - [2.1](#21)
+- [2. SuperScan 与 Nmap](#2-superscan-与-nmap)
+    - [2.1 SuperScan 测试结果](#21-superscan-测试结果)
+    - [2.2 Nmap 测试结果](#22-nmap-测试结果)
 
 <!-- /TOC -->
 
@@ -60,6 +61,26 @@ Content-Type: multipart/form-data; boundary=----------------------------f69b8bee
 
 但由于我们不清楚数据中的格式，也不能确定包中的数据是否为源数据，故无法还原出原始数据。故在此提醒用户，参加云安全计划时要谨慎选择。
 
-## 2. SuperScan
+## 2. SuperScan 与 Nmap
 
-### 2.1 
+### 2.1 SuperScan 测试结果
+
+在下载 SuperScan V4.0 之后，我们在测试主机上以管理员权限打开软件。在“主机名/IP”一栏中填入百度的网址。
+
+但是由于位置原因，此 SuperScan 不能获取到任何结果（见）
+
+![SuperScan 测试结果](./superscan.jpg)
+
+图三 无法获取到 SuperScan 的测试结果
+
+### 2.2 Nmap 测试结果
+
+由于无法通过 SuperScan 获取测试结果，我们在本次试验中引入了比 SuperScan 更加先进、更加简便易用的 Nmap 来作为我们的扫描测试软件。
+
+![Nmap 测试结果](./nmap.png)
+
+图四 Nmap 测试结果
+
+本次端口扫描测试选择了百度的主机（119.75.216.20）作为目标主机。
+
+根据获得的扫描结果，我们发现目标主机只开放了 80（http）和 443（https）两个端口。并无其他多余端口。证明对方有一定安全意识。
