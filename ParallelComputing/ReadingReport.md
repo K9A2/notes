@@ -3,7 +3,7 @@
 
 **Deadline: Jun. 22**
 
-**ABSTRACTION:**
+**ABSTRACTION: Megastore is a storage system designed to meet the demand of today`s interactive online service. Therefore, it possesses the features of scalability and availability. Besides, it sill provides fully supported ACID semantics for fast developing as well as geographical distributed data partitioning storage system to keep data safety. In this paper, we discuss the basic concepts within Megastore and replication algorithms within Megasotre as well as the deployment issues.**
 
 **Keywords: Megastore, Large database, Paxos, Distributed transaction, Bigtable**
 
